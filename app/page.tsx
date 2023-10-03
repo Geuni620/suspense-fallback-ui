@@ -1,9 +1,13 @@
 'use client';
 
-import UsequeryComp from 'app/components/UsequeryComp';
+// import UsequeryComp from 'app/components/UsequeryComp';
+import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
-// const UsequeryComp = dynamic(() => import('./components/UsequeryComp'), {});
+const UsequeryComp = dynamic(() => import('./components/UsequeryComp'), {
+  ssr: false,
+  loading: () => <div>useQuery loading...</div>,
+});
 
 export default function Home() {
   return (
