@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const wait = async (ms: number) => {
+const wait = async (ms: number) => {
   return new Promise((resolve) => {
     setTimeout(resolve, ms);
   });
@@ -28,8 +28,6 @@ export const fetchPostQuery = async () => {
 
 export const axiosPostQuery = async () => {
   await wait(3000);
-
-  console.log('axios 서버가 동작했다~!');
 
   const response = await axios.get(
     'https://jsonplaceholder.typicode.com/posts',
