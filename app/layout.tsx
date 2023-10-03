@@ -1,5 +1,6 @@
 import './globals.css';
 
+import Nav from 'app/Nav';
 import QueryContext from 'components/client/common/QueryContext';
 import { Inter } from 'next/font/google';
 
@@ -15,6 +16,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <QueryContext>
           <main style={{ height: '100dvh' }} className="mx-auto max-w-[768px]">
+            <Nav />
             {children}
           </main>
         </QueryContext>
