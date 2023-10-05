@@ -1,7 +1,7 @@
 'use client';
 
 import UsequeryComp from 'app/components/UsequeryComp';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 
 // const UsequeryComp = dynamic(() => import('./components/UsequeryComp'), {
@@ -16,7 +16,7 @@ export default function Home() {
         <UseEffectComp />
       </div> */}
 
-      <Suspense fallback={<div>useQuery loading...</div>}>
+      <Suspense fallback={<div>...useQuery loading</div>}>
         <div className="flex items-center justify-center bg-blue-500">
           <UsequeryComp />
         </div>

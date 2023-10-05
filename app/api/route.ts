@@ -34,3 +34,10 @@ export const axiosPostQuery = async () => {
   );
   return response.data;
 };
+
+export const serverPostQuery = async () => {
+  await wait(3000);
+
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+  return response.json();
+};
